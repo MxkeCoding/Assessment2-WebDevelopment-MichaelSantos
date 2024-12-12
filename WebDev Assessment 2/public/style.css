@@ -2,20 +2,22 @@ body{
     display: grid;
     margin: 0;
     padding: 0;
+    background-color: rgb(41, 41, 41);
+    color: white;
 }
 
 .content{
+    margin: 4rem;
 }
 .navigation{
     display: grid;
-    background-color: aqua;
+    background-color: rgba(8, 8, 8, 0.777);
     padding-left: 10px;
     padding-right: 10px;
     grid-template-columns: 2fr 1fr;
 }
 
 .menu{
-    background-color: blue;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     list-style:none;
@@ -25,11 +27,16 @@ body{
 }
 
 .introduction{
-    background-color: blueviolet;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .textIntroduction{
-    background-color: aquamarine;
-    width: 40%;
+    width: 75%;
     padding: 4rem;
+}
+
+.summary{
+    background-color: rgb(75, 156, 129);
+
 }
