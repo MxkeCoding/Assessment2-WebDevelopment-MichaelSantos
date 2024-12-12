@@ -4,13 +4,32 @@ body{
     padding: 0;
 }
 
+.content{
+}
 .navigation{
     display: grid;
     background-color: aqua;
     padding-left: 10px;
     padding-right: 10px;
+    grid-template-columns: 2fr 1fr;
+}
+
+.menu{
+    background-color: blue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style:none;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .introduction{
-    
+    background-color: blueviolet;
+}
+
+.textIntroduction{
+    background-color: aquamarine;
+    width: 40%;
+    padding: 4rem;
 }
