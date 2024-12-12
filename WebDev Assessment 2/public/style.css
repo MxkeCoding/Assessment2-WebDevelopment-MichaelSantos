@@ -1,0 +1,16 @@
+body{
+    display: grid;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation{
+    display: grid;
+    background-color: aqua;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.introduction{
+    
+}
