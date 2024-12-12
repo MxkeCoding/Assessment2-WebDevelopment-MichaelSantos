@@ -6,14 +6,18 @@ body{
     color: white;
 }
 
+p{
+    font-size: 23px;
+}
+
 .content{
     margin: 4rem;
 }
 .navigation{
     display: grid;
     background-color: rgba(8, 8, 8, 0.777);
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
     grid-template-columns: 2fr 1fr;
 }
 
@@ -38,5 +42,12 @@ body{
 
 .summary{
     background-color: rgb(75, 156, 129);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+}
 
+.summaryHeader h1{
+    text-align: right;
+    padding-right: 4rem;
 }
