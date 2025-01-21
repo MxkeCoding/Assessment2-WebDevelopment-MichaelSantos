@@ -1,53 +1,531 @@
-body{
-    display: grid;
+/* Base Styles */
+body {
+    /* Set background color, font family, and basic layout styles */
+    background-color: #000000cc;
+    background-image: url('./assets/UI Images/TakeResponsibility.jpeg');
+    background-blend-mode: darken; /* Blend the overlay with the image */
+    
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
+    font-optical-sizing: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: rgb(41, 41, 41);
-    color: white;
 }
 
-p{
-    font-size: 23px;
+body, html {
+    /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
-.content{
-    margin: 4rem;
-}
-.navigation{
-    display: grid;
-    background-color: rgba(8, 8, 8, 0.777);
-    padding-left: 1rem;
-    padding-right: 1rem;
-    grid-template-columns: 2fr 1fr;
+.main {
+    /* Center main content and apply padding */
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    padding: 1rem;
+    background-color: #000000e0;
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
-.menu{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    list-style:none;
+/* Logo */
+.logo {
+    /* Center logo horizontally */
+    display: flex;
     justify-content: center;
+    background-color: #000000;
+}
+
+.logo img {
+    /* Set logo image width */
+    width: 200px;
+}
+
+.nav {
+    width: 100%;
+    background-color: #000000;
+    margin-bottom: 2rem;
+}
+/* Navigation */
+.navigation {
+    /* Style navigation bar with grid layout */
+    width: 55vw;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
+    text-align: center;
+    padding: 3vh;
+    font-size: 15px;
+    color: white;
+    background-color: #000000;
+}
+
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use the current text color */
+}
+a : :hover{
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use the current text color */
+}
+
+/* Content */
+.content {
+    color: #525252;
     
 }
 
-.introduction{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.content1 {
+    color: #fff;
+    
 }
 
-.textIntroduction{
-    width: 75%;
-    padding: 4rem;
-}
-
-.summary{
-    background-color: rgb(75, 156, 129);
+.entry {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.entryImg {
+    padding-top: 7rem;
+}
+
+/* Headings */
+.heading {
+    /* Apply font style for headings */
+    font-family: "Protest Guerrilla", sans-serif;
+    font-size: 3rem;
+}
+
+.title {
+    display: grid;
+    place-items: center;
+}
+
+.title1 {
+    /* Style main title */
+    font-size: 5rem;
+    font-family: "Protest Guerrilla", sans-serif;
+}
+
+.title2 {
+    /* Style subtitle */
+    font-size: 2rem;
+    font-family: "Protest Guerrilla", sans-serif;
+}
+
+/* Summary */
+.summary {
+    /* Style summary section width and spacing */
+    width: 70%;
+    padding-bottom: 2rem;
+}
+
+.summary p {
+    /* Set font size for summary text */
+    font-size: 1.25rem;
+}
+
+/* Box1 Grid */
+.box1 {
+    /* Column layout for box1 text */
+    column-count: 2;
+    column-gap: 1rem;
     padding: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    
 }
 
-.summaryHeader h1{
-    text-align: right;
-    padding-right: 4rem;
+.box1 p {
+    /* Font size for box1 text */
+    font-size: 0.9rem;
+}
+
+.Characters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #ffffff;
+}
+.Awards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #fff;
+}
+.characterimg {
+    text-align: center;
+}
+
+.column1 {
+    color: #ffffff;
+}
+
+.column2 {
+    color: #ffffff;
+    text-align: center;
+    padding-top: 1rem;
+    
+}
+.system-requirements {
+    padding-top: 3rem;
+}
+ul {
+    list-style-type: none;
+    padding: 0; /* Optionally remove padding */
+}
+
+/* Ensure the Characters section uses grid layout */
+.Characters {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding-bottom: 10rem;
+}
+
+/* Style for each character container */
+.characterimg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ensure the character text and image stay centered */
+.characterimg h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Albums */
+.albums {
+    /* Center albums section and make it full width */
+    margin: 0 auto;
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Image Grid */
+.image-grid {
+    /* Grid layout for images */
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    gap: 20px; 
+}
+
+.image1 {
+    /* Large image covering two rows */
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+}
+
+.small-image:nth-child(2) {
+    /* Position small image 2 */
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.small-image:nth-child(3) {
+    /* Position small image 3 */
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+}
+
+.small-image:nth-child(4) {
+    /* Position small image 4 */
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.small-image:nth-child(5) {
+    /* Position small image 5 */
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+}
+
+.image-grid img {
+    /* Style images to fit container */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Author Section */
+.author {
+    /* Grid layout for author section */
+    flex: 1;
+    margin: 0 auto;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.author1 {
+    /* Padding for author text */
+    padding: 2rem;
+}
+
+.author2 img {
+    /* Style author image */
+    border-radius: 50%;
+    max-width: 15em; /* Ensure the image doesn't exceed the original size */
+}
+.columnAwards {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    
+}
+
+/* Footer */
+.footer {
+    /* Style footer with background color, text color, and centering */
+    margin-top: auto;
+    background-color: #000000;
+    color: white;
+    padding: 1.5vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 1600px) {
+    .entry {
+        display: flex;
+        flex-direction: column;
+    }
+    .title {
+        display: grid
+    ;
+        place-items: center;
+    }
+
+    .title1 {
+        order: 1;
+        text-align: center; /* Optional: Center-align text for smaller screens */
+    }
+
+    .entryImg {
+        order: 2;
+        margin: 1rem auto; /* Optional: Add spacing and center the video */
+    }
+
+    .title2 {
+        order: 3;
+        text-align: center; /* Optional: Center-align text for smaller screens */
+        margin-top: 1rem;
+    }
+
+    .summary {
+        order: 4;
+        margin-top: 1rem;
+    }
+}
+
+
+/* Tablet (720px - 1024px) */
+@media (max-width: 1024px) {
+    .main {
+        padding: 0;
+        width: 90%;
+    }
+    .logo img {
+        width: 80px;
+    }
+    .navigation {
+        width: 90%;
+        grid-gap: 30px;
+    }
+    .heading {
+        font-size: 3rem;
+    }
+    .entry {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center child elements horizontally */
+        justify-content: center; /* Center child elements vertically */
+        gap: 1rem; /* Adjust spacing between children */
+    }
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Horizontally center the content */
+        justify-content: center; /* Vertically center the content */
+        width: 100%; /* Ensure it spans the full width if needed */
+        text-align: center; /* Optional: Center-align text */
+    }
+    .title1, .title2 {
+        font-size: 2.5rem;
+    }
+    .entry * {
+        max-width: 100%;
+        width: 90%;
+    }
+    .entryImg {
+        width: 100%;
+        max-width: 560px;
+        margin: 1rem auto;
+    }
+    .summary {
+        font-size: 1rem;
+        text-align: justify;
+        margin-top: 1rem;
+    }
+    .box1 {
+        column-count: 1;
+        column-gap: 1rem;
+    }
+    .albums {
+        width: 100%;
+    }
+    .summary {
+        width: 100%;
+    }
+    .image-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .author {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .author1 {
+        order: 1;
+    }
+    .author2 {
+        order: 2;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+/* Large Mobile (540px - 720px) */
+@media (max-width: 720px) {
+    .main, .navigation, .summary, .albums {
+        /* Full width and reset margins on large mobile */
+        width: 100%;
+        margin: 0;
+    }
+    .title1, .title2 {
+        font-size: 2rem; /* Further reduce font size */
+    }
+    .title {
+        display: grid
+    ;
+        place-items: center;
+    }
+    .summary {
+        font-size: 0.9rem; /* Scale down summary text */
+    }
+
+    .nav {
+        margin-bottom: 0;
+    }
+    .entryImg {
+        max-width: 100%; /* Ensure video fits within smaller screens */
+        width: 100%;
+        
+    }
+    .navigation {
+        /* Adjust navigation spacing on large mobile */
+        grid-gap: 20px;
+    }
+    .title2 {
+        /* Increase subtitle font size on large mobile */
+        font-size: 3rem;
+    }
+    .heading {
+        /* Center align heading and adjust font size on large mobile */
+        text-align: center;
+        font-size: 2rem;
+    }
+    .author {
+        /* Single column layout for author section on small mobile */
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .author1 {
+        /* Move author text below image on small mobile */
+        order: 2;
+    }
+    .author2 {
+        /* Move author image above text and center it */
+        order: 1;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Small Mobile (360px - 540px) */
+@media (max-width: 540px) {
+    .main {
+        /* Reduce padding and center align on small mobile */
+        padding: 0;
+        margin: auto;
+        width: 100%;
+        justify-content: center;
+    }
+    .entry * {
+        width: 100%; /* Make all children fit the screen width */
+        max-width: 100%;
+    }
+
+    .title1, .title2 {
+        font-size: 1.5rem; /* Even smaller fonts for very small screens */
+    }
+
+    .summary {
+        font-size: 0.8rem; /* Keep summary legible on small screens */
+    }
+
+    .entryImg {
+        max-width: 100%; /* Full width for the video */
+        
+    }
+    .logo img {
+        /* Smaller logo size on small mobile */
+        width: 80px;
+    }
+    .navigation {
+        /* Make navigation full width and adjust spacing on small mobile */
+        width: 100%;
+        grid-gap: 12px;
+    }
+    .heading h1 {
+        /* Reduce heading font size on small mobile */
+        font-size: 2rem;
+    }
+    .albums {
+        /* Ensure albums section is full width on small mobile */
+        width: 100%;
+    }
+    .image-grid {
+        /* Stack images in a column on small mobile */
+        display: flex;
+        flex-direction: column;
+    }
+    .author {
+        /* Single column layout for author section on small mobile */
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .author1 {
+        /* Move author text below image on small mobile */
+        order: 2;
+    }
+    .author2 {
+        /* Move author image above text and center it */
+        order: 1;
+        display: flex;
+        justify-content: center;
+    }
 }
